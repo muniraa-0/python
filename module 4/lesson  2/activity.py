@@ -1,0 +1,10 @@
+tuple1 = ("Python","JS",False,1,2,3)
+print(tuple1)
+tuple2 = (1,2,3,4,5,6)
+print(tuple2)
+print("Length of Tuple1:",len(tuple1))
+
+print(tuple1[3])
+tuple1 = tuple1 + (9,)
+print(tuple1)
+print(tuple2[2:5])
