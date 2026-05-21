@@ -1,33 +1,27 @@
+
 grade_book = {
-    "Munira": 95,
-    "Farisa": 91,
-    "taskin ahmed": 93,
-    "Rifah": 88,
-    "Muntaha": 70,
-    "Mira":92,
-    "munia": 87,
+    "Munira": 100,
+    "Farisa": 92,
+    "Rifah": 75,
+    "Taskeen": 96,
+    "Namira": 81
 }
-print("="*50)
-print("STUDENT GRADE BOOK SYSTEM")
-print("="*50)
+
 
 total = 0
-student_count = 0
+for grade in grade_book.values():
+    total += grade
+average = total / len(grade_book)
+print(f"Class Average: {average}")
 
-for score in grade_book.values():
-    total += score
-    student_count +=1
+top = max(grade_book, key=grade_book.get)
+bottom = min(grade_book, key=grade_book.get)
+print(f"Top student: {top} with {grade_book[top]}")
+print(f"Bottom student: {bottom} with {grade_book[bottom]}")
 
-class_average = total / student_count
-print(f"\n Class statics:")
-print(f"  Total Students: {student_count}")
-print(f"   class average: {class_average:.2f}%")
-print("-"*40)
-
-
-top_student = Munira(grade_book,key=grade_book.get)
-top_score = grade_book[top_student]
-bottom_student = muntaha(grade_book, key=grade_book.get)
-bottom_score = grade_book[bottom_student]
-
-print("TOP STUDENT",Munira)
+name = input("Enter a name to look up: ")
+score = grade_book.get(name)
+if score:
+    print(f"{name} scored {score}")
+else:
+    print(f"{name} not found")
