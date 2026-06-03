@@ -12,3 +12,6 @@ class son(dad):
         self.age = age
          
         dad.__init__(self,eyes,height)
+ob = son("Kalam",12,"brown","4 feet 4 inch")
+print(f"Your  name is {ob.name}.You are{ob.age}years old.")
+ob.display()
