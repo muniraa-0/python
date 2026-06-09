@@ -12,5 +12,5 @@ c = computer()
 c.sell()
 c.__maxprice = 1200
 c.sell()
-c.setmaxprice()
+c.setmaxprice(1200)
 c.sell()
