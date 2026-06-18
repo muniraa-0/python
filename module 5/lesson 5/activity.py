@@ -7,6 +7,6 @@ class absclass(ABC):
         self.print("This is an abstract method")
 class test_class(absclass):
     def task(self):
-        self.print("This is a sub class")
+        print("This is a sub class")
 test_obj = test_class()
 test_obj.task()
