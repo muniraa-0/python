@@ -11,7 +11,7 @@ for i in range(4):
     root.rowconfigure(i,weight=1, minsize=50)
     for j in range(3):
         frame = Frame(master=root, relief=SUNKEN, borderwidth=1)
-        lbale1 = Label(master=frame, text=nums[i][j], bg="#d0efff")
+        label1 = Label(master=frame, text=nums[i][j], bg="#d0efff")
         label.pack()(padx = 3, pady = 3)
 
 root.mainloop()
