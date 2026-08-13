@@ -14,9 +14,22 @@ email_entry = Entry(master=frame)
 password_entry = Entry(master=frame,show="*")
 
 def display():
-    name = name_entr.get()
+    name = name_entry.get()
     greet = "Hello " +name+ "!"
     Message = "\nCongratulations! You have successfully signed up."
-    textbox.insert(END,Message)
+    textbox.insert(END,greet)
+    textbox.insert(END,message)
 
-textbox = Text
+textbox = Text(master=root,bg="grey",fg="white")
+btn = Button(text = "Create Account", command=display,bg="#B41C1C")
+
+frame.place(x=20, y=0)
+label1.place(x=20,y=20)
+label2.place(x=20,y=80)
+email_entry.place(x=150, y=20)
+label3.place(x=20,y=140)
+password_entry.place(x=150, y=140)
+btn.place(x=130, y=210)
+textbox.place(y=250)
+
+root.mainloop()
